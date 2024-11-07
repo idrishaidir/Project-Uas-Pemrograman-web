@@ -110,6 +110,19 @@ header {
 }
 /* Header End */
 
+/* Main Start */
+.welcome {
+  display: block;
+  padding-top: 2em;
+  text-align: center;
+}
+.welcome p {
+  padding: 0.5em 20em;
+}
+
+.welcome .batas {
+}
+/* Main END */
 @media screen and (max-width: 768px) {
   .menu-navbar {
     display: none;
