@@ -1,3 +1,13 @@
+// NAVBAR START
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("navbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("navbar-container").innerHTML = data;
+    });
+});
+// NAVBAR 
+
 // Hamburger Menu Start
 const tombol = document.querySelector(".tombol");
 const menu = document.querySelector(".menu-navbar");
