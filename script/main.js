@@ -4,18 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("navbar-container").innerHTML = data;
+
+      // Seleksi elemen tombol dan menu setelah navbar dimuat
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu-navbar");
+
+      tombol.addEventListener("click", () => {
+        menu.classList.toggle("aktif");
+      });
     });
 });
-// NAVBAR 
-
-// Hamburger Menu Start
-const tombol = document.querySelector(".tombol");
-const menu = document.querySelector(".menu-navbar");
-
-tombol.addEventListener("click", () => {
-  menu.classList.toggle("aktif");
-});
-// Hamburger Menu END
+// NAVBAR END
 
 // Header STRART
 let currentIndex = 0;

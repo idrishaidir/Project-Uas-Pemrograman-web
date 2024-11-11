@@ -1,0 +1,21 @@
+.kontak {
+  padding: 2rem 5rem;
+}
+
+iframe {
+  width: 100%;
+}
+
+.detail-kontak {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alamat {
+  max-width: 30%;
+}
+
+.notelp a {
+  color: black;
+  text-decoration: none;
+}
