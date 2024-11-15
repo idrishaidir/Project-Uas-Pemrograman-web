@@ -31,5 +31,11 @@ function nextSlide() {
   showSlide(currentIndex);
 }
 
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  showSlide(currentIndex);
+}
+
 setInterval(nextSlide, 5000);
+
 // Header END
