@@ -31,7 +31,7 @@ header {
 
 .carousel-slide {
   min-width: 100%;
-  position: relative;
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
