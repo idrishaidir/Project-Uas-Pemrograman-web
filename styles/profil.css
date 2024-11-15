@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    /* max-width: 1200px; */
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: auto;
+}
+
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.visi-misi h2 {
+    display: inline-block;
+    padding-bottom: 0.01rem;
+    border-bottom: 0.2rem solid black;
+    margin-bottom: 1rem;
+}
+
+.visi-misi ol {
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+.visi-misi ol li {
+    margin-bottom: 0.5rem;
+}
+
+/* STAF START */
+.staf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-staf {
+    text-align: center;
+    width: 30%;
+    min-height: 300px;
+    max-height: 700px;
+    background: white;
+    color: black;
+    padding: 24px;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-staf .jabatan {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-staf .deskripsi {
+    font-size: 14px;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+
+.card-staf .foto {
+    width: 150px;
+    height: 150px;
+    margin: 7px;
+    padding: 2px;
+}
+
+/* STAF END */
+
+/* KEPALA SEKOLAH START */
+.card-kepsek {
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    min-height: 300px;
+    max-height: 700px;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    background: white;
+    color: black;
+    padding: 24px;
+    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-kepsek .jabatan {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-kepsek .deskripsi {
+    font-size: 14px;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+
+.card-kepsek .foto {
+    width: 150px;
+    height: 150px;
+    margin: 7px;
+    padding: 2px;
+}
+
+/* KEPALA SEKOLAH END */
+
+/* SLIDE FOTO START */
+.slideshow-content {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-content .slide,  .slideshow-content .slide-Lab, .slideshow-content .slide-Perpus{
+    display: none;
+}
+.slideshow-content .slide img, .slideshow-content .slide-Lab img, .slideshow-content .slide-Perpus img{
+    height: 27rem;
+    width: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-text {
+    color: #f2f2f2;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    /* mix-blend-mode: difference; */
+}
+
+.bulet, .bulet-Lab, .bulet-Perpus{
+    display: block;
+    text-align: center;
+}
+
+.biji, .biji-Lab, .biji-Perpus{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #000080;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-slide, .biji:hover, .active-Lab, .biji-Lab:hover, .active-Perpus, .biji-Perpus:hover {
+    background-color: #c5cbe3;
+}
+
+.slideshow-content .gerak{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/* SLIDE FOTO END */
+
+/* SIDEBAR START */
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: auto;
+    /* padding-left: 5rem; */
+    margin-bottom: 3rem;
+    background-color: #fff;
+    /* width: 500px; */
+}
+
+.sub-header img {
+    height: 500px;
+    width: 1050px;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding: 0;
+    /* width: 100%; */
+}
+
+.sidebar-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #8bc34a;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    /* text-decoration: none; */
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 10px;
+    padding-left: 0;
+}
+
+.sidebar-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-section ul li a i{
+    padding-right: 7px;
+}
+
+.sidebar-section a:hover {
+    color:deepskyblue;
+}
+
+/* BUAT NGASIH BORDER BAWAH PAS DI HOVER */
+.sidebar-section a::after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid crimson;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+    transform-origin: 0 0;
+}
+
+/* PANJANG BORDER BAWAH */
+.sidebar-section a:hover::after {
+    transform: scaleX(0.3);
+}
+/* SIDEBAR END */
