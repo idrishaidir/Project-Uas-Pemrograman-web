@@ -13,7 +13,6 @@ body {
 
 .container {
     display: flex;
-    /* max-width: 1200px; */
     max-width: auto;
     margin: 0 auto;
     padding: 20px;
@@ -65,10 +64,11 @@ body {
     width: 30%;
     min-height: 300px;
     max-height: 700px;
-    background: white;
+    background: #FAEBD7;
     color: black;
     padding: 24px;
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 5px 5px 1.5px rgba(0, 0, 0, 0.5), -2px 5px 5px 1.5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5); */
 }
 
 .card-staf .jabatan {
@@ -100,10 +100,10 @@ body {
     max-height: 700px;
     margin-bottom: 3rem;
     margin-top: 3rem;
-    background: white;
+    background: #FAEBD7;
     color: black;
     padding: 24px;
-    box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 5px 5px 1.5px rgba(0, 0, 0, 0.5), -2px 5px 5px 1.5px rgba(0, 0, 0, 0.5);
 }
 
 .card-kepsek .jabatan {
@@ -129,14 +129,20 @@ body {
 /* SLIDE FOTO START */
 .slideshow-content {
     max-width: 800px;
+    max-width: auto;
     position: relative;
     margin: auto;
 }
 
-.slideshow-content .slide,  .slideshow-content .slide-Lab, .slideshow-content .slide-Perpus{
+.slideshow-content .slide,
+.slideshow-content .slide-Lab,
+.slideshow-content .slide-Perpus {
     display: none;
 }
-.slideshow-content .slide img, .slideshow-content .slide-Lab img, .slideshow-content .slide-Perpus img{
+
+.slideshow-content .slide img,
+.slideshow-content .slide-Lab img,
+.slideshow-content .slide-Perpus img {
     height: 27rem;
     width: 100%;
 }
@@ -178,12 +184,16 @@ body {
     /* mix-blend-mode: difference; */
 }
 
-.bulet, .bulet-Lab, .bulet-Perpus{
+.bulet,
+.bulet-Lab,
+.bulet-Perpus {
     display: block;
     text-align: center;
 }
 
-.biji, .biji-Lab, .biji-Perpus{
+.biji,
+.biji-Lab,
+.biji-Perpus {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -194,19 +204,30 @@ body {
     transition: background-color 0.6s ease;
 }
 
-.active-slide, .biji:hover, .active-Lab, .biji-Lab:hover, .active-Perpus, .biji-Perpus:hover {
+.active-slide,
+.biji:hover,
+.active-Lab,
+.biji-Lab:hover,
+.active-Perpus,
+.biji-Perpus:hover {
     background-color: #c5cbe3;
 }
 
-.slideshow-content .gerak{
+.slideshow-content .gerak {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
+
 /* SLIDE FOTO END */
 
 /* SIDEBAR START */
@@ -270,26 +291,227 @@ body {
     color: #333;
 }
 
-.sidebar-section ul li a i{
+.sidebar-section ul li a i {
     padding-right: 7px;
 }
 
 .sidebar-section a:hover {
-    color:deepskyblue;
+    color: deepskyblue;
 }
 
 /* BUAT NGASIH BORDER BAWAH PAS DI HOVER */
-.sidebar-section a::after{
+.sidebar-section a::after {
     content: '';
     display: block;
     border-bottom: 0.1rem solid crimson;
     transform: scaleX(0);
     transition: 0.2s linear;
-    transform-origin: 0 0;
+    /* transform-origin: 0 0; */
 }
 
 /* PANJANG BORDER BAWAH */
 .sidebar-section a:hover::after {
     transform: scaleX(0.3);
 }
+
 /* SIDEBAR END */
+
+/* RESPONSIVE PROFILE START */
+/* media queries */
+
+/* 4K */
+@media (max-width : 2560px) and (min-width : 1441px){
+    html {
+        font-size: 100%;
+    }
+
+    .sidebar-section a::after {
+        transform-origin: 0 0;
+    }
+}
+
+/* LAPTOP Gede */
+@media (max-width : 1440px)and (min-width : 1367px){
+    html {
+        font-size: 95%;
+    }
+
+    .sidebar-section a::after {
+        transform-origin: 0 0;
+    }
+}
+
+/* laptop Kecil*/
+@media (max-width: 1367px) and (min-width : 769px){
+    html {
+        font-size: 75%;
+    }
+
+    .sidebar-section a::after {
+        transform-origin: 0 0;
+    }
+
+    .content .sub-header img {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width : 768px) {
+    html {
+        font-size: 75%;
+        text-align: justify;
+    }
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .sidebar-section h3 {
+        font-size: 1.7rem;
+        border-bottom: 2px solid #8bc34a;
+        padding-bottom: 1px;
+        margin-bottom: 10px;
+        text-align: center;
+        /* min-width: 500px; */
+    }
+
+    .sidebar-section li {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sidebar-section a::after {
+        content: '';
+        display: block;
+        border-bottom: 0.1rem solid crimson;
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+
+    .content .sub-header img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .content .header {
+        font-size: 1.5rem;
+    }
+
+    .visi-misi h2 {
+        font-size: 1.2rem;
+    }
+
+    .content .card-kepsek,
+    .content .card-staf {
+        width: 45%;
+        min-height: 300px;
+        max-height: 1000px;
+    }
+
+    .content .card-kepsek img,
+    .content .card-staf img {
+        width: 110px;
+        height: 100px;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .content .card-kepsek .jabatan,
+    .content .card-staf .jabatan {
+        font-size: 1.5rem;
+    }
+
+    .content .card-kepsek .deskripsi,
+    .content .card-staf .deskripsi {
+        font-size: 1rem;
+    }
+
+    .slide,
+    .slide-Lab,
+    .slide-Perpus {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 70px; */
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 12px;
+        color: #4B0082;
+        font-weight: bolder;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0px;
+        user-select: none;
+        border-radius: 50%;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        border-radius: 50%;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(255, 250, 205, 0.8);
+    }
+
+    .biji,
+    .biji-Lab,
+    .biji-Perpus {
+        width: 10px;
+        height: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width : 451px) {
+    html {
+        font-size: 80%;
+        text-align: justify;
+    }
+
+    .sidebar-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-section li {
+        font-size: 1.3rem;
+    }
+
+    .content .card-kepsek .jabatan,
+    .content .card-staf .jabatan {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .content .card-kepsek img,
+    .content .card-staf img {
+        width: 90%;
+        height: 100px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+}
+
+@media (max-width : 375px) {
+    html{
+        font-size: 70%;
+    }
+}
+
+/* RESPONSIVE PROFILE END */
