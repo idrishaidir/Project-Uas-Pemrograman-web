@@ -1,3 +1,9 @@
+:root{
+    --bg-color : #1A303F;
+    --bg-color2 : #fdf5e6;
+    --font-color : #2B505C;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +14,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #1A303F;
+    color: #e6e6e6;
 }
 
 .container {
@@ -20,10 +27,18 @@ body {
 
 .main-content {
     flex: 3;
-    background-color: #fff;
+    background-color: #1A303F;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-right: auto;
+}
+
+#lobby p{
+    line-height: 1.5rem;
+}
+#lobby ul{
+    line-height: 1.5rem;
+    margin-left: 1rem;
 }
 
 .content {
@@ -32,6 +47,29 @@ body {
 
 .active {
     display: block;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: auto;
+    /* padding-left: 5rem; */
+    margin-bottom: 3rem;
+    background-color: #fff;
+    /* width: 500px; */
+}
+
+.sub-header img {
+    height: 500px;
+    width: 1050px;
 }
 
 .visi-misi h2 {
@@ -74,12 +112,14 @@ body {
 .card-staf .jabatan {
     font-size: 18px;
     font-weight: bolder;
+    color: var(--font-color);
 }
 
 .card-staf .deskripsi {
     font-size: 14px;
     margin-top: 0.5rem;
     line-height: 1.5rem;
+    color: var(--font-color);
 }
 
 .card-staf .foto {
@@ -109,12 +149,14 @@ body {
 .card-kepsek .jabatan {
     font-size: 18px;
     font-weight: bolder;
+    color: var(--font-color);
 }
 
 .card-kepsek .deskripsi {
     font-size: 14px;
     margin-top: 0.5rem;
     line-height: 1.5rem;
+    color: var(--font-color);
 }
 
 .card-kepsek .foto {
@@ -233,32 +275,10 @@ body {
 /* SIDEBAR START */
 .sidebar {
     flex: 1;
-    background-color: #fff;
+    background-color: #fdf5e6;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.sub-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1f1f1;
-    padding: auto;
-    /* padding-left: 5rem; */
-    margin-bottom: 3rem;
-    background-color: #fff;
-    /* width: 500px; */
-}
-
-.sub-header img {
-    height: 500px;
-    width: 1050px;
+    z-index: 999;
 }
 
 .sidebar-section {
@@ -271,9 +291,10 @@ body {
 .sidebar-section h3 {
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 2px solid #8bc34a;
+    border-bottom: 2px solid #644117;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    color: #2B505C;
     /* text-decoration: none; */
 }
 
@@ -296,14 +317,14 @@ body {
 }
 
 .sidebar-section a:hover {
-    color: deepskyblue;
+    color: #607D7E;
 }
 
 /* BUAT NGASIH BORDER BAWAH PAS DI HOVER */
 .sidebar-section a::after {
     content: '';
     display: block;
-    border-bottom: 0.1rem solid crimson;
+    border-bottom: 0.1rem solid var(--bg-color);
     transform: scaleX(0);
     transition: 0.2s linear;
     /* transform-origin: 0 0; */
