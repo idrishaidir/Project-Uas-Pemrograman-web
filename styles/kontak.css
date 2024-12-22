@@ -1,21 +1,95 @@
+body,
+h1,
+h2,
+h3,
+p,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .kontak {
-  padding: 2rem 5rem;
+  max-width: 1200px;
+  margin: 2px auto;
+  padding: 20px;
+}
+
+.kontak h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #444;
 }
 
 iframe {
   width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .detail-kontak {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.alamat {
-  max-width: 30%;
+.detail-kontak div {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.notelp a {
-  color: black;
+.detail-kontak h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail-kontak p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.detail-kontak a {
   text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.detail-kontak a:hover {
+  color: #0056b3;
+}
+
+.detail-kontak i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .detail-kontak {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .detail-kontak div {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
 }

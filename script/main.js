@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // NAVBAR END
 
-// Header STRART
 let currentIndex = 0;
 const slides = document.querySelectorAll(".carousel-slide");
 const totalSlides = slides.length;
@@ -39,3 +38,44 @@ function prevSlide() {
 setInterval(nextSlide, 5000);
 
 // Header END
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".toggle-content");
+
+  // Fungsionalitas tombol "Baca Selengkapnya"
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const content = this.previousElementSibling;
+      if (content.classList.contains("hide")) {
+        content.classList.remove("hide");
+        this.textContent = "Tutup";
+      } else {
+        content.classList.add("hide");
+        this.textContent = "Baca Selengkapnya";
+      }
+    });
+  });
+});
+
+window.fbAsyncInit = function () {
+  FB.init({
+    appId: "https://www.facebook.com/",
+    cookie: true,
+    xfbml: true,
+    version: "v13.0",
+  });
+
+  FB.getLoginStatus(function (response) {
+    statusChangeCallback(response);
+  });
+};
+
+function statusChangeCallback(response) {
+  console.log("Status login: " + response.status);
+
+  if (response.status === "connected") {
+    console.log("Login berhasil!");
+  } else {
+    console.log("Login gagal!");
+  }
+}

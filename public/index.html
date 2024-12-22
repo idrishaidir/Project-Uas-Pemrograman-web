@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SMK</title>
     <link rel="stylesheet" href="../styles/style.css" />
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar-container").innerHTML = data;
-          });
-      });
-    </script> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div id="navbar-container"></div>
@@ -27,7 +19,7 @@
               <p>Menyihir Dunia dengan Prestasi</p>
             </div>
           </div>
-          <div class="carousel-slide">
+          <div class="carousel-slide no-cover">
             <img src="../assets/home/2 JURUSAN.png" alt="Slide 2" />
             <div class="caption">
               <h1>Welcome To SMK 300</h1>
@@ -35,21 +27,21 @@
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="../assets/home/3 LULUS 2 TAHUN.png" alt="Slide 2" />
+            <img src="../assets/home/3 LULUS 2 TAHUN.png" alt="Slide 3" />
             <div class="caption">
               <h1>Welcome To SMK 300</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="../assets/home/4 OR DAN EKS.png" alt="Slide 2" />
+            <img src="../assets/home/4 OR DAN EKS.png" alt="Slide 4" />
             <div class="caption">
               <h1>Welcome To SMK 300</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
           </div>
           <div class="carousel-slide">
-            <img src="../assets/home/5 FASILITAS.png" alt="Slide 2" />
+            <img src="../assets/home/5 FASILITAS.png" alt="Slide 5" />
             <div class="caption">
               <h1>Welcome To SMK 300</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -63,70 +55,141 @@
     </header>
 
     <main>
-      <!-- Visi Misi -->
-      <div class="visiMisi">
-        <h1>VISI</h1>
-        <hr />
-        <p>
-          Menjadi sekolah yang unggul dan inovatif dalam mencetak generasi yang
-          cerdas, berkarakter, dan siap menghadapi tantangan global dengan
-          memanfaatkan teknologi sebagai sarana pembelajaran yang efektif dan
-          efisien.
-        </p>
-        <h1>MISI</h1>
-        <hr />
-        <ol>
-          <li>
-            Menyediakan lingkungan belajar yang mendukung pengembangan potensi
-            siswa secara holistik.
-          </li>
-          <li>
-            Meningkatkan kualitas pendidikan melalui pengajaran yang berbasis
-            pada teknologi dan metode pembelajaran terkini.
-          </li>
-          <li>
-            Membentuk siswa yang tidak hanya cerdas secara akademik, tetapi juga
-            memiliki integritas, kepedulian sosial, dan kepemimpinan.
-          </li>
-          <li>
-            Meningkatkan kerjasama dengan orang tua, alumni, dan masyarakat
-            untuk menciptakan ekosistem pendidikan yang lebih baik.
-          </li>
-          <li>
-            Menyajikan informasi yang transparan dan terupdate melalui platform
-            digital guna mendukung kemudahan akses bagi semua pihak.
-          </li>
-        </ol>
+      <div class="visi-misi">
+        <section class="visi" data-aos="fade-down">
+          <h1 class="judul">Visi</h1>
+          <p class="isi">
+            Visi kami adalah menjadi sekolah unggul dan inovatif yang mencetak
+            generasi cerdas, berkarakter, dan siap menghadapi tantangan global.
+            <span class="hide" data-aos="fade-down">
+              Kami memanfaatkan teknologi sebagai sarana pembelajaran yang
+              efektif dan efisien, guna menciptakan lingkungan belajar yang
+              dinamis dan mendukung perkembangan kreativitas, kolaborasi, serta
+              kemampuan berpikir kritis. Dengan pendekatan ini, kami berkomitmen
+              untuk mempersiapkan siswa yang tidak hanya sukses secara akademis,
+              tetapi juga memiliki integritas dan rasa tanggung jawab tinggi.
+            </span>
+            <button class="toggle-content">Baca Selengkapnya</button>
+          </p>
+        </section>
+        <section class="misi">
+          <h1 class="judul" data-aos="fade-down">Misi</h1>
+          <ol class="isi">
+            <li data-aos="fade-down">
+              Menyediakan pendidikan yang berkualitas dengan pendekatan yang
+              berpusat pada siswa, untuk mengembangkan potensi intelektual,
+              emosional, dan sosial setiap individu.
+            </li>
+            <li data-aos="fade-down">
+              Mengintegrasikan teknologi dalam pembelajaran untuk meningkatkan
+              efektivitas dan efisiensi proses belajar mengajar, serta
+              mempersiapkan siswa menghadapi tantangan dunia digital.
+            </li>
+            <span class="hide">
+              <li data-aos="fade-down">
+                Membangun karakter siswa melalui pendidikan yang berfokus pada
+                nilai-nilai moral, etika, dan kedisiplinan, guna menciptakan
+                individu yang bertanggung jawab, empati, dan memiliki
+                integritas.
+              </li>
+              <li data-aos="fade-down">
+                Mendorong kreativitas dan inovasi dengan memberikan ruang bagi
+                siswa untuk mengeksplorasi ide dan solusi baru, baik dalam
+                bidang akademik maupun non-akademik.
+              </li>
+              <li data-aos="fade-down">
+                Mengembangkan keterampilan berpikir kritis dan problem solving
+                melalui metode pembelajaran yang menantang siswa untuk
+                menganalisis, menilai, dan menyelesaikan masalah secara mandiri
+                maupun kolaboratif.
+              </li>
+              <li data-aos="fade-down">
+                Membangun kemitraan yang kuat dengan orang tua, komunitas, dan
+                dunia usaha untuk menciptakan ekosistem pendidikan yang saling
+                mendukung dan relevan dengan kebutuhan global.
+              </li>
+              <li data-aos="fade-down">
+                Memberikan pembelajaran yang inklusif dan berkeadilan untuk
+                memastikan setiap siswa, tanpa terkecuali, mendapatkan
+                kesempatan yang sama untuk berkembang dan sukses.
+              </li>
+              <li data-aos="fade-down">
+                Mempersiapkan siswa untuk menjadi pemimpin masa depan yang
+                memiliki kemampuan adaptasi yang tinggi, mampu bekerja dalam tim
+                global, dan memiliki visi yang luas untuk memberikan kontribusi
+                positif kepada masyarakat.
+              </li>
+            </span>
+            <button class="toggle-content">Baca Selengkapnya</button>
+          </ol>
+        </section>
       </div>
-      <!-- Visi Misi END -->
-      <!-- Tentang Kami -->
-      <div class="tentangKami">
-        <h1>TENTANG KAMI</h1>
-        <hr />
-        <div class="content">
-          <img src="" alt="" />
+
+      <div class="prestasi">
+        <div class="sub-judul-prestasi">
+          <h1>PRESTASI SISWA/I SMA HOGWARTS</h1>
           <p>
-            Sekolah kami berdiri dengan tujuan untuk mencetak generasi muda yang
-            tidak hanya unggul dalam bidang akademik, tetapi juga memiliki
-            karakter yang kuat, kreativitas, dan kemampuan untuk beradaptasi
-            dengan perkembangan zaman. Kami percaya bahwa pendidikan yang
-            berkualitas adalah kunci untuk membuka masa depan yang lebih baik
-            bagi setiap siswa. Dengan fasilitas yang memadai dan tenaga pendidik
-            yang berkompeten, kami berkomitmen untuk menciptakan lingkungan
-            belajar yang kondusif dan menyenangkan. Melalui pendekatan yang
-            inovatif, kami memfasilitasi siswa untuk mengembangkan potensi
-            mereka secara optimal, baik dalam bidang ilmu pengetahuan, seni,
-            olahraga, maupun kegiatan sosial. Sekolah kami juga sangat
-            mengutamakan nilai-nilai kebersamaan, disiplin, dan kepedulian
-            terhadap sesama. Kami terus berusaha untuk memberikan yang terbaik
-            bagi setiap individu di lingkungan sekolah ini, agar mereka bisa
-            berkembang menjadi pribadi yang bermanfaat bagi masyarakat.
+            Kami bangga dengan prestasi yang diraih siswa-siswa kami di berbagai
+            bidang. Inilah bukti kerja keras dan dedikasi mereka di SMA
+            Hogwarts.
           </p>
         </div>
+        <div class="caption-prestasi">
+          <img src="../assets/home/prestasi.png" alt="" class="hide" />
+          <p class="caption-prestasi1">Perkumpulan Ilmuan Muda</p>
+          <p class="caption-prestasi2">Meraih Juara 1 di Bidang Akademik</p>
+        </div>
       </div>
-      <!-- Tentang Kami END -->
+
+      <div class="kegiatan">
+        <div class="sub-judul-kegiatan">
+          <h1>KEGIATAN SMA HOGWARTS</h1>
+        </div>
+        <div class="caption-kegiatan">
+          <img src="../assets/home/kegiatan.png" alt="" class="hide" />
+          <p class="caption-kegiatan1">OSIS SMA HOGWARTS</p>
+          <p class="caption-kegiatan2">Kebersamaan dan Kepemimpinan</p>
+        </div>
+      </div>
+      <div class="tentang-kami">
+        <h1>Tentang Kami</h1>
+        <p>
+          <b>SMA Hogwarts </b>adalah sekolah menengah atas yang mengedepankan
+          pembelajaran holistik dan kreatif dengan memadukan akademik, seni, dan
+          keterampilan hidup dalam suasana yang imajinatif dan inspiratif.
+          Terinspirasi dari nilai-nilai keragaman, kolaborasi, dan inovasi, SMA
+          Hogwarts menyediakan lingkungan belajar yang mendukung perkembangan
+          intelektual, karakter, dan jiwa sosial para siswa. Dengan kurikulum
+          yang dirancang untuk menumbuhkan keterampilan berpikir kritis dan
+          kreatif, sekolah ini menawarkan berbagai jurusan yang membekali siswa
+          untuk siap menghadapi tantangan masa depan, seperti
+          <b
+            >Teknik Magis, Ilmu Komunikasi Magis, Ilmu Magis Kuno, dan Teknik
+            Ramuan dan Pengobatan Magis.</b
+          >
+        </p>
+        <p>
+          Di SMA Hogwarts, siswa tidak hanya belajar di kelas, tetapi juga
+          terlibat dalam ekstrakurikuler dan komunitas yang memperluas wawasan
+          mereka, seperti
+          <b
+            >Perkumpulan Ilmuwan Muda, Perhimpunan Penulis dan Pewarta,
+            Komunitas Pecinta Alam, Hogwarts’s Band</b
+          >
+          serta <b>Tim Basket Hogwarts.</b>Tim Basket Hogwarts. Dengan fasilitas
+          yang lengkap dan dukungan dari para staf pengajar profesional, SMA
+          Hogwarts adalah tempat di mana kreativitas, intelektualitas, dan
+          karakter yang kuat dikembangkan untuk membentuk generasi muda yang
+          siap berkontribusi dalam masyarakat.
+        </p>
+      </div>
     </main>
+
     <script src="../script/main.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- <script src="/script/navbar.js" defer></script> -->
   </body>
 </html>
