@@ -58,6 +58,7 @@ header {
   font-size: 0.5em;
   max-width: auto;
 }
+
 /* Header End */
 
 /* Main Start */
@@ -67,6 +68,7 @@ header {
   text-align: center;
   padding: 0.5em 20%;
 }
+
 .visiMisi h1 {
   padding-top: 1em;
 }
@@ -80,10 +82,12 @@ header {
   padding: 3rem;
   background-color: rgb(56, 56, 56);
 }
+
 .tentangKami h1 {
   color: #fff;
   text-align: center;
 }
+
 .content {
   display: flex;
   text-align: center;
@@ -105,14 +109,21 @@ header {
   padding-left: 2rem;
   text-align: justify;
 }
+
 hr {
   height: 0.2rem;
   margin: 0 auto;
   background-color: aqua;
   width: 20%;
 }
+
 /* Main END */
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 75%;
+    text-align: justify;
+  }
+
   .caption {
     font-size: 1.5em;
     padding: 8px 16px;
