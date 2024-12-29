@@ -29,6 +29,7 @@ if (!$berita) {
 </head>
 <body>
     <div id="navbar-container"></div>
+    <div class="jeda"></div>
     <main class="container">
         <div class="berita-detail">
             <h2 class="judul-berita">

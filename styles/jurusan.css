@@ -23,6 +23,7 @@ body {
     max-width: auto;
     margin: 0 auto;
     padding: 20px;
+    padding-top: 6rem;
     background-color: var(--bg-color);
     /* min-height: 130vh; */
 }
@@ -399,6 +400,10 @@ body {
 @media (max-width : 1024px){
     html{
         font-size: 70%;
+    }
+
+    .container{
+        padding-top: 7rem;
     }
     
     .content{

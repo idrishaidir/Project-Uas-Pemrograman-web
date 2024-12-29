@@ -17,6 +17,7 @@ html {
 
 /* Header Start */
 header {
+  padding-top: 5.5%;
   overflow: hidden;
   position: relative;
 }
@@ -302,11 +303,21 @@ header {
   .sub-judul-prestasi p {
     font-size: 0.8em;
   }
+
+  header {
+    padding-top: 10%;
+  }
 }
 
 @media (max-width: 426px) {
   .caption-kegiatan,
   .caption-prestasi {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  header {
+    padding-top: 12.5%;
   }
 }

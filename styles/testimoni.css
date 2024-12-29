@@ -16,7 +16,7 @@ body {
 h1 {
   color: var(--bg-color2);
   text-align: center;
-  margin-top: 20px;
+  padding-top: 2em;
 }
 
 .container {
@@ -72,7 +72,7 @@ h1 {
   background: #555;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .card {
     display: block;
   }
@@ -83,5 +83,10 @@ h1 {
     width: 100%;
     object-fit: cover;
     height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    padding-top: 3em;
   }
 }

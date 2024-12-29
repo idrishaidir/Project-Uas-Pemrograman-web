@@ -80,6 +80,11 @@ include("ceklogin.php");
         ?>
         </div>
     </div>
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Oops! The page you are looking for cannot be found.</p>
+        <p>hanya dapat ditampilkan didekstop</p>
+    </div>
 
     <!-- content -->
 </body>

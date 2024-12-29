@@ -20,7 +20,7 @@ $hasil = mysqli_query($connect, $sql);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?=getprofilweb('site_title')?></title>
+    <title><?=getprofilweb('site_title')?>-Info</title>
     <link rel="stylesheet" href="../styles/info.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>

@@ -214,104 +214,13 @@ table a {
 }
 
 /* Gaya Responsif */
-@media (max-width: 768px) {
-  table {
-    font-size: 12px;
-  }
-
-  table th,
-  table td {
-    padding: 10px;
-  }
-
-  .action-link {
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-
-  .admin-container {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  .admin-header h3 {
-    font-size: 1.5em;
-  }
-
-  .admin-menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .admin-menu a {
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  table {
-    border: 0;
-    font-size: 12px;
-    width: 100%;
-  }
-
-  table thead {
+@media (min-width: 769px) {
+  .error-container {
     display: none;
   }
-
-  table tr {
-    display: block;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  table td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #666;
-    flex-shrink: 0;
-  }
-
-  .action-link {
-    font-size: 10px;
-    padding: 5px;
-    width: 20%;
-    text-align: center;
-  }
-
-  .action-link + .action-link {
-    margin-left: 4%;
-  }
-
+}
+@media (max-width: 768px) {
   .admin-container {
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .admin-header h3 {
-    font-size: 1.2em;
-  }
-
-  .admin-menu a {
-    font-size: 0.9em;
-    padding: 5px;
+    display: none;
   }
 }
