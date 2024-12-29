@@ -29,7 +29,7 @@ if (isset($_POST['tambahuser'])) {
         $stmt = $connect->prepare("INSERT INTO admin (Nama, username, password, email) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $nama, $username, $hashedPassword, $email);
         if ($stmt->execute()) {
-            handle_success(message: "User berhasil ditambahkan!");
+            handle_success("User berhasil ditambahkan!");
         } else {
             handle_error("Terjadi kesalahan saat menambahkan user.");
         }
@@ -84,7 +84,7 @@ if (isset($_POST['edituser'])) {
 if (isset($_GET['act']) && $_GET['act'] == 'hapus' && isset($_GET['id'])) {
     $id = (int)$_GET['id'];
     $sql = mysqli_query($connect,"DELETE FROM admin WHERE ID='$id'");
-    handle_success(message: "User berhasil dihapus");
+    handle_success("User berhasil dihapus");
 }
 ?>
 <!DOCTYPE html>
@@ -92,7 +92,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'hapus' && isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah User</title>
+    <title></title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -116,7 +116,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'hapus' && isset($_GET['id'])) {
                 <input type="text" id="username" name="username" placeholder="Username" value="<?= isset($r['username']) ? htmlspecialchars($r['username']) : '' ?>" required>
 
                 <label for="password">Password</label>
-                <input type="text" id="password" name="password" placeholder="Password" value="<?= isset($r['password']) ? htmlspecialchars($r['password']) : '' ?>" required>
+                <input type="text" id="password" name="password" placeholder="Password" value="<?= isset($r['password']) ? str_repeat('*', 8) : '' ?>" required>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email Address" value="<?= isset($r['email']) ? htmlspecialchars($r['email']) : '' ?>" required>

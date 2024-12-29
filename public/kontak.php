@@ -1,5 +1,6 @@
 <?php
-$uri = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  require_once '../inc/koneksi.php';
+  require_once '../inc/fungsi.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,13 +8,11 @@ $uri = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontak Hogwarts</title>
-    <!-- <link rel="stylesheet" href="../styles/kontak.css" /> -->
+    <title><?=getprofilweb('site_title')?>-Kontak</title>
     <script
       src="https://kit.fontawesome.com/23a7c17145.js"
       crossorigin="anonymous"
     ></script>
-    <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v21.0"></script>
     <link rel="stylesheet" href="../styles/kontak.css">
   </head>
@@ -68,9 +67,13 @@ $uri = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
               ><i class="fa-brands fa-instagram"></i> Instagram</a>
           </p>
         </div>
+        <section id="fb-root"></section>
+          <?php
+            $uri = 'http://yourdomain.com' . $_SERVER['REQUEST_URI'];
+          ?>
+        <div class="fb-comments" data-href="<?php echo $uri; ?>" data-width="100%" data-numposts="5"></div>
       </div>
     </div>
-    <div class="fb-comments" data-href="https://localhost/matkul-web/Project%20UAS/public/kontak.php" data-width="" data-numposts="5"></div>
+    <script src="../script/main.js" defer></script>
   </body>
-  <script src="../script/main.js" defer></script>
 </html>

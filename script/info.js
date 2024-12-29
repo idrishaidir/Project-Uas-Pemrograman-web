@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fungsi untuk memperbarui posisi carousel
   function updateCarousel() {
     const carousel = document.querySelector(".carousel");
-    const totalSlides = carousel.children.length;
     carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
 

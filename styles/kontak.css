@@ -1,19 +1,22 @@
-body,
-h1,
-h2,
-h3,
-p,
-a,
-div {
+:root {
+  --bg-color: #1a303f;
+  --bg-color2: #fdf5e6;
+  --font-color: #2b505c;
+  --hover-color: #333;
+  --hover-color2: #c0b8aa;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Arial", sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: var(--bg-color);
   color: #333;
   margin: 0;
   padding: 0;
@@ -21,7 +24,7 @@ body {
 
 .kontak {
   max-width: 1200px;
-  margin: 2px auto;
+  margin: 0px auto;
   padding: 20px;
 }
 
@@ -29,7 +32,8 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #444;
+  color: var(--bg-color2);
+  padding-top: 10%;
 }
 
 iframe {
@@ -48,7 +52,7 @@ iframe {
 .detail-kontak div {
   flex: 1 1 calc(33.333% - 20px);
   min-width: 280px;
-  background: #f4f4f4;
+  background: var(--bg-color2);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -57,39 +61,16 @@ iframe {
 .detail-kontak h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--font-color);
 }
 
 .detail-kontak p {
   font-size: 1rem;
-  color: #666;
+  color: var(--font-color);
   margin-bottom: 10px;
 }
 
 .detail-kontak a {
+  color: var(--font-color);
   text-decoration: none;
-  color: #007bff;
-  transition: color 0.3s;
-}
-
-.detail-kontak a:hover {
-  color: #0056b3;
-}
-
-.detail-kontak i {
-  font-size: 1.5rem;
-  margin-right: 10px;
-  color: #444;
-}
-
-@media (max-width: 768px) {
-  .detail-kontak {
-    /* flex-direction: column; */
-    align-items: center;
-  }
-
-  .detail-kontak div {
-    flex: 1 1 100%;
-    max-width: 600px;
-  }
 }

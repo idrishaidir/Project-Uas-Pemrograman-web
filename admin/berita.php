@@ -1,5 +1,6 @@
 <?php
 require_once '../inc/koneksi.php';
+date_default_timezone_set('Asia/Jakarta');
 
 if (isset($_POST['add'])) {
     // Menambahkan berita baru
@@ -45,7 +46,8 @@ if (isset($_POST['add'])) {
     $hasil = mysqli_query($connect, $sql);
 
     if ($hasil) {
-        echo "Data berhasil ditambahkan!";
+        header("Location: ?mod=berita");
+        exit;
     } else {
         echo "Error: " . mysqli_error($connect);
     }
@@ -83,6 +85,11 @@ if (isset($_POST['update'])) {
             echo 'Invalid file type';
             exit;
         }
+    } else {
+        // Retain existing image if no new image is uploaded
+        $query = mysqli_query($connect, "SELECT Gambar FROM berita WHERE ID = '$id'");
+        $row = mysqli_fetch_assoc($query);
+        $gambar = $row['Gambar'];
     }
 
     $sql = "UPDATE berita SET 
@@ -97,7 +104,8 @@ if (isset($_POST['update'])) {
     $hasil = mysqli_query($connect, $sql);
 
     if ($hasil) {
-        echo "Data berhasil diperbarui!";
+        header("Location: ?mod=berita");
+        exit;
     } else {
         echo "Error: " . mysqli_error($connect);
     }
@@ -121,7 +129,8 @@ if (isset($_GET['act']) && $_GET['act'] == 'hapus' && isset($_GET['id'])) {
     $hasil = mysqli_query($connect, $sql);
 
     if ($hasil) {
-        echo "Berita berhasil dihapus!";
+        header("Location: ?mod=berita");
+        exit;
     } else {
         echo "Error: " . mysqli_error($connect);
     }
@@ -140,7 +149,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'edit' && isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Berita</title>
+    <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

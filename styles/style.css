@@ -2,18 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: none; */
 }
 
-body {
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   overflow-x: hidden;
   background-color: #2d4354;
-  margin: 0;
   font-family: sans-serif, Tahoma, Verdana;
 }
 
 /* Header Start */
 header {
+  padding-top: 53.09px;
   overflow: hidden;
   position: relative;
 }
@@ -58,39 +62,43 @@ header {
 }
 
 .caption h1 {
-  font-size: 2.5em;
+  font-size: 150%;
   margin: 0;
 }
 
 .caption p {
-  font-size: 1em;
+  font-size: 100%;
   margin: 5px 0 0;
 }
 
-button.prev,
-button.next {
+.prev,
+.next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 2em;
-  z-index: 10;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-button.prev {
+.prev {
   left: 10px;
 }
 
-button.next {
+.next {
   right: 10px;
 }
 
-button:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 25%;
 }
 
 /* Header End */
@@ -151,6 +159,8 @@ button:hover {
   text-align: center;
 }
 .sub-judul-prestasi h1 {
+  font-weight: 800;
+  font-size: 2em;
   padding-top: 1em;
   color: #2d4354;
 }
@@ -161,28 +171,31 @@ button:hover {
   color: #636a70;
 }
 
-.caption-prestasi {
-  font-weight: 700;
-  padding-top: 3em;
+.caption-prestasi,
+.caption-kegiatan {
+  font-weight: 300;
+  padding-top: 1em;
   font-size: 33px;
   display: grid;
-  gap: 2em;
-  color: #fff3e5;
   position: relative;
 }
 
+.caption-prestasi {
+  color: #fff3e5;
+  gap: 7em;
+}
+
 .caption-prestasi img {
-  width: 600px;
+  width: 500px;
   position: absolute;
-  right: -8%;
-  bottom: -50%;
+  right: -3em;
+  bottom: 10%;
   z-index: 999;
 }
 
 .caption-prestasi1 {
-  font-size: 2rem;
   text-align: center;
-  max-width: 500px;
+  width: 80%;
   background-color: #73766a;
   padding: 5px 0px 5px 0px;
   position: relative;
@@ -215,39 +228,33 @@ button:hover {
 }
 
 .caption-kegiatan {
-  font-weight: 700;
-  padding-top: 3em;
-  font-size: 33px;
-  display: grid;
-  gap: 5em;
-  position: relative;
+  gap: 6em;
   color: #2d4354;
 }
 
 .caption-kegiatan img {
   width: 1000px;
   position: absolute;
-  bottom: -30%;
+  bottom: -14%;
   z-index: 999;
 }
 
 .caption-kegiatan1 {
-  font-size: 2rem;
-  max-width: 100%;
+  width: 100%;
   padding: 5px 10px 5px 20px;
   position: relative;
-  right: -700px;
+  right: -50%;
   border-radius: 10px;
   background: linear-gradient(to right, #fff9eb, #2d4354);
 }
 
 .caption-kegiatan2 {
-  font-size: 2rem;
   text-align: end;
-  max-width: 80%;
+  width: 80%;
   background: linear-gradient(to right, #2d4354, #fff9eb);
   padding: 5px 20px 5px 10px;
   position: relative;
+  bottom: -50%;
   right: 10px;
   border-radius: 10px;
 }
@@ -264,14 +271,59 @@ button:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .hide {
     display: none;
   }
+
+  .caption-prestasi {
+    gap: 1em;
+  }
+
+  .caption-kegiatan {
+    padding-top: 1em;
+    gap: 2em;
+  }
+
   .caption-kegiatan1,
   .caption-prestasi2 {
     right: -5%;
   }
+
   .toggle-content {
     display: block;
+  }
+  .sub-judul-kegiatan,
+  .sub-judul-prestasi {
+    font-size: 1em;
+  }
+  .sub-judul-kegiatan p,
+  .sub-judul-prestasi p {
+    font-size: 0.8em;
+  }
+
+  header {
+    padding-top: 10%;
+  }
+}
+
+@media (max-width: 426px) {
+  .caption-kegiatan,
+  .caption-prestasi {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  header {
+    padding-top: 42.09px;
+  }
+}
+
+@media (min-width: 1140px) {
+  header {
+    padding-top: 5.5%;
   }
 }

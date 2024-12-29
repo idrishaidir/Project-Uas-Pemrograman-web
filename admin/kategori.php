@@ -80,7 +80,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'hapus' && isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah/Edit Kategori</title>
+    <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

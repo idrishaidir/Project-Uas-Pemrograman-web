@@ -1,7 +1,14 @@
+:root {
+  --bg-color: #1a303f;
+  --bg-color2: #e6d6c1;
+  --font-color: #2b505c;
+  --hover-color: #333;
+}
+
 /* Konfigurasi Gaya Global */
 body {
   font-family: Arial, sans-serif, "Poppins", sans-serif;
-  background-color: #f4f4f9;
+  background-color: var(--bg-color);
   min-width: 60%;
   display: flex;
   justify-content: center;
@@ -9,11 +16,12 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 20px;
+  color: var(--font-color);
 }
 
 /* Gaya Komponen */
 .container {
-  background-color: #fff;
+  background-color: #fefe;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -22,26 +30,51 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.form-container label {
+  margin-top: 20px;
+  display: flex;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 td {
   padding: 10px;
   vertical-align: middle;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
 }
 
 label {
   font-weight: bold;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"] {
+  color: #fff;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--hover-color);
 }
 
 button {
@@ -56,59 +89,6 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-/* Gaya User Admin */
-.form-container {
-  padding: 10px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.user-form fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.user-form legend {
-  font-size: 1.5em;
-  color: #333;
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.user-form label {
-  display: block;
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 5px;
-}
-
-.user-form input[type="text"],
-.user-form input[type="password"],
-.user-form input[type="email"],
-.user-form input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-.user-form input[type="submit"] {
-  color: #fff;
-  background-color: #007bff;
-  cursor: pointer;
-}
-
-.user-form input[type="submit"]:hover {
-  background-color: #0056b3;
 }
 
 .alert {
@@ -132,16 +112,9 @@ button:hover {
 }
 
 /* Gaya Tabel */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
 table th,
 table td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--bg-color);
   text-align: left;
   padding: 10px;
 }
@@ -155,21 +128,17 @@ table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-table td {
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-}
-
 table td .action-link {
   white-space: nowrap;
 }
 
 table a {
   text-decoration: none;
+  margin: 5px;
   padding: 5px 10px;
   border-radius: 4px;
   color: #fff;
+  display: flex;
 }
 
 .action-link.edit {
@@ -189,91 +158,14 @@ table a {
 }
 
 .action-buttons {
-  display: flex;
-  gap: 5px;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-/* Gaya Responsif untuk Tablet */
-@media (max-width: 768px) {
-  table {
-    font-size: 12px;
-  }
-
-  table th,
-  table td {
-    padding: 10px;
-  }
-
-  .action-link {
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-}
-
-/* Gaya Responsif untuk Ponsel */
-@media (max-width: 480px) {
-  table {
-    border: 0;
-    font-size: 12px;
-    width: 100%;
-  }
-
-  table thead {
-    display: none;
-  }
-
-  table tr {
-    display: block;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  table td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
-  }
-
-  table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    color: #666;
-    flex-shrink: 0;
-  }
-
-  .action-link {
-    font-size: 10px;
-    padding: 5px;
-    width: 20%;
-    text-align: center;
-  }
-
-  .action-link + .action-link {
-    margin-left: 4%;
-  }
-}
-
-select-button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 20px;
+  height: 100%;
 }
 
 /* Gaya Admin */
 .admin-container {
+  width: 800px;
   margin: 50px auto;
   background: #ffffff;
   padding: 20px;
@@ -288,13 +180,13 @@ select-button {
 
 .admin-header h3 {
   margin: 0;
-  color: #333333;
+  color: var(--font-color);
 }
 
 .admin-header hr {
   border: 0;
   height: 2px;
-  background: #007bff;
+  background: var(--bg-color);
   width: 50%;
   margin: 10px auto;
 }
@@ -309,55 +201,26 @@ select-button {
 .admin-menu a {
   text-decoration: none;
   font-weight: 500;
-  color: #007bff;
+  color: var(--font-color);
   padding: 10px 20px;
-  border: 1px solid #007bff;
+  border: 1px solid var(--bg-color);
   border-radius: 5px;
   transition: background 0.3s, color 0.3s;
 }
 
 .admin-menu a:hover {
-  background: #007bff;
+  background: var(--hover-color);
   color: #ffffff;
 }
 
-/* Responsif untuk Admin */
-@media (max-width: 768px) {
-  .admin-container {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  .admin-header h3 {
-    font-size: 1.5em;
-  }
-
-  .admin-menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .admin-menu a {
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
-    padding: 8px;
+/* Gaya Responsif */
+@media (min-width: 769px) {
+  .error-container {
+    display: none;
   }
 }
-
-/* Responsif untuk Admin pada Mobile */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .admin-container {
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .admin-header h3 {
-    font-size: 1.2em;
-  }
-
-  .admin-menu a {
-    font-size: 0.9em;
-    padding: 5px;
+    display: none;
   }
 }

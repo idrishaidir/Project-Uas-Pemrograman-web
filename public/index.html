@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SMK</title>
+    <title>Hogwarts Academi-Home</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -15,42 +15,34 @@
           <div class="carousel-slide">
             <img src="../assets/home/1 SMA HOGWARTS.png" alt="Slide 1" />
             <div class="caption">
-              <h1>Welcome To<br />SMA HOGWARTS</h1>
+              <h1>Welcome To<br />SMK HOGWARTS</h1>
               <p>Menyihir Dunia dengan Prestasi</p>
             </div>
           </div>
           <div class="carousel-slide no-cover">
             <img src="../assets/home/2 JURUSAN.png" alt="Slide 2" />
-            <div class="caption">
-              <h1>Welcome To SMK 300</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
           </div>
-          <div class="carousel-slide">
+          <div class="carousel-slide no-cover">
             <img src="../assets/home/3 LULUS 2 TAHUN.png" alt="Slide 3" />
-            <div class="caption">
-              <h1>Welcome To SMK 300</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
           </div>
           <div class="carousel-slide">
             <img src="../assets/home/4 OR DAN EKS.png" alt="Slide 4" />
             <div class="caption">
-              <h1>Welcome To SMK 300</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <h1>Organisasi & Ekstrakurikuler</h1>
+              <p>Gabung dan Kembangkan Potensimu</p>
             </div>
           </div>
           <div class="carousel-slide">
             <img src="../assets/home/5 FASILITAS.png" alt="Slide 5" />
             <div class="caption">
-              <h1>Welcome To SMK 300</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <h1>Fasilitas & Lingkungan Sekolah</h1>
+              <p>"Fasilitas di SMA Hogwarts yang nyaman dan kondusif"</p>
             </div>
           </div>
         </div>
         <!-- Tombol Navigasi -->
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="nextSlide()">&#10095;</a>
       </div>
     </header>
 
@@ -126,7 +118,11 @@
       </div>
 
       <div class="prestasi">
-        <div class="sub-judul-prestasi">
+        <div
+          class="sub-judul-prestasi"
+          data-aos="fade-down"
+          data-aos-duration="700"
+        >
           <h1>PRESTASI SISWA/I SMA HOGWARTS</h1>
           <p>
             Kami bangga dengan prestasi yang diraih siswa-siswa kami di berbagai
@@ -135,25 +131,71 @@
           </p>
         </div>
         <div class="caption-prestasi">
-          <img src="../assets/home/prestasi.png" alt="" class="hide" />
-          <p class="caption-prestasi1">Perkumpulan Ilmuan Muda</p>
-          <p class="caption-prestasi2">Meraih Juara 1 di Bidang Akademik</p>
+          <img
+            src="../assets/home/prestasi.png"
+            alt=""
+            class="hide"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          />
+          <p
+            class="caption-prestasi1"
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          >
+            Perkumpulan Ilmuan Muda
+          </p>
+          <p
+            class="caption-prestasi2"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          >
+            Meraih Juara 1 di Bidang Akademik
+          </p>
         </div>
       </div>
 
       <div class="kegiatan">
-        <div class="sub-judul-kegiatan">
+        <div
+          class="sub-judul-kegiatan"
+          data-aos="fade-down"
+          data-aos-duration="700"
+        >
           <h1>KEGIATAN SMA HOGWARTS</h1>
         </div>
         <div class="caption-kegiatan">
-          <img src="../assets/home/kegiatan.png" alt="" class="hide" />
-          <p class="caption-kegiatan1">OSIS SMA HOGWARTS</p>
-          <p class="caption-kegiatan2">Kebersamaan dan Kepemimpinan</p>
+          <img
+            src="../assets/home/kegiatan.png"
+            alt=""
+            class="hide"
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          />
+          <p
+            class="caption-kegiatan1"
+            data-aos="fade-left"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          >
+            OSIS SMA HOGWARTS
+          </p>
+          <p
+            class="caption-kegiatan2"
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="800"
+          >
+            Kebersamaan dan Kepemimpinan
+          </p>
         </div>
       </div>
       <div class="tentang-kami">
-        <h1>Tentang Kami</h1>
-        <p>
+        <h1 data-aos="fade-down" data-aos-duration="800">Tentang Kami</h1>
+        <p data-aos="fade-down" data-aos-delay="500" data-aos-duration="800">
           <b>SMA Hogwarts </b>adalah sekolah menengah atas yang mengedepankan
           pembelajaran holistik dan kreatif dengan memadukan akademik, seni, dan
           keterampilan hidup dalam suasana yang imajinatif dan inspiratif.
@@ -168,7 +210,7 @@
             Ramuan dan Pengobatan Magis.</b
           >
         </p>
-        <p>
+        <p data-aos="fade-down" data-aos-delay="500" data-aos-duration="800">
           Di SMA Hogwarts, siswa tidak hanya belajar di kelas, tetapi juga
           terlibat dalam ekstrakurikuler dan komunitas yang memperluas wawasan
           mereka, seperti

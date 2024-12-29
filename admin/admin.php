@@ -43,10 +43,10 @@ include("ceklogin.php");
             <hr>
         </div>
         <div class="admin-menu">
-            <a href="?mod=admin">Home</a>
             <a href="?mod=kategori">Kategori</a>
             <a href="?mod=berita">Berita</a>
             <a href="?mod=konfigurasi">Konfigurasi</a>
+            <a href="?mod=testimoni">Testimoni</a>
             <a href="?mod=useradmin">User Admin</a>
             <a href="?keluar=yes">Log Out</a>
         </div>
@@ -67,6 +67,9 @@ include("ceklogin.php");
               case 'konfigurasi':
                   include("konfigurasi.php");
                   break;
+              case 'testimoni':
+                  include("testimoni.php");
+                  break;
               case 'useradmin':
                   include("useradmin.php");
                   break;
@@ -76,6 +79,11 @@ include("ceklogin.php");
             }
         ?>
         </div>
+    </div>
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Oops! The page you are looking for cannot be found.</p>
+        <p>hanya dapat ditampilkan didekstop</p>
     </div>
 
     <!-- content -->
