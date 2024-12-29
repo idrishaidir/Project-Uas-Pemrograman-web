@@ -33,14 +33,15 @@ $hasil = mysqli_query($connect, $sql);
                 <div class="carousel-slide no-cover">
                     <img src="../assets/info/Murid Berprestasi.png" alt="Slide 1" />
                     <div class="caption">
-                        <p>SMK Hogwarts baru saja memenangkan penghargaan di ajang Olimpiade Sains Nasional. Selamat kepada tim siswa dan pembimbing atas prestasi gemilang ini</p>
+                        <h1>Prestasi SMA HOGWARTS</h1>
+                        <p>Memenangkan Lomba Sains Nasional</p>
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <img src="../assets/info/kemah.png" alt="Slide 2" />
                     <div class="caption">
                         <h1>Jambore Nasional</h1>
-                        <p>Siswa dan Siswi SMK Hogwarts Mengikuti Jambore Nasional</p>
+                        <p>Siswa dan Siswi SMA Hogwarts Mengikuti Jambore Nasional</p>
                     </div>
                 </div>
                 <div class="carousel-slide no-cover">
@@ -101,22 +102,5 @@ $hasil = mysqli_query($connect, $sql);
     <!-- Link JS Custom -->
     <script src="../script/info.js"></script>
     <script src="../script/main.js" defer></script>
-    <script>
-        function filterBerita(kategori) {
-            window.location.href = "info.php?kategori=" + encodeURIComponent(kategori) + "#berita-container";
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-  const menu = document.getElementById("menu");
-  const nav = document.getElementById("nav");
-
-  // Toggle menu
-  menu.addEventListener("click", function () {
-    menu.classList.toggle("open");
-    nav.classList.toggle("visible");
-  });
-});
-
-    </script>
 </body>
 </html>

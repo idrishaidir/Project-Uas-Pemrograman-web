@@ -49,4 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Inisialisasi posisi awal carousel
   updateCarousel();
+
+  const menu = document.getElementById("menu");
+  const nav = document.getElementById("nav");
+
+  // Toggle menu
+  menu.addEventListener("click", function () {
+    menu.classList.toggle("open");
+    nav.classList.toggle("visible");
+  });
 });
+
+function filterBerita(kategori) {
+  window.location.href =
+    "info.php?kategori=" + encodeURIComponent(kategori) + "#berita-container";
+}

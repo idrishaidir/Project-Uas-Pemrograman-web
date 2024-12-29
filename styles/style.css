@@ -128,23 +128,9 @@ header {
   font-size: 1.2em;
   line-height: 1.6;
   text-align: justify;
-  animation: slideUp 1s ease-out;
+  padding: 0 3rem 0 3rem;
 }
 
-.toggle-content {
-  display: none;
-  margin: 1rem auto;
-  padding: 0.5rem 1rem;
-  background-color: #dbc7af;
-  color: #2d4354;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle-content:hover {
-  background-color: #c0a98e;
-}
 /* visi misi end */
 
 /* prestasi start */
@@ -273,9 +259,6 @@ header {
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
-  }
-  .hide {
-    display: none;
   }
 
   .caption-prestasi {

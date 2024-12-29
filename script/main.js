@@ -38,21 +38,3 @@ function prevSlide() {
 
 setInterval(nextSlide, 5000);
 // Header END
-
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButtons = document.querySelectorAll(".toggle-content");
-
-  // Fungsionalitas tombol "Baca Selengkapnya"
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const content = this.previousElementSibling;
-      if (content.classList.contains("hide")) {
-        content.classList.remove("hide");
-        this.textContent = "Tutup";
-      } else {
-        content.classList.add("hide");
-        this.textContent = "Baca Selengkapnya";
-      }
-    });
-  });
-});
