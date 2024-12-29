@@ -1,7 +1,13 @@
-/* Reset dasar */
+:root {
+  --bg-color: #1a303f;
+  --bg-color2: #fdf5e6;
+  --font-color: #2b505c;
+  --hover-color: #101e27;
+  --hover-color2: #c0b8aa;
+}
 body {
   font-family: Arial, sans-serif;
-  background-color: #e6d6c1;
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
 }
@@ -21,13 +27,13 @@ body {
 }
 
 .berita-detail h2 {
-  color: #1a303f;
+  color: var(--font-color);
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .tanggal-berita {
-  color: #1a303f;
+  color: var(--bg-color);
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -43,15 +49,15 @@ body {
 .isi-berita {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #1a303f;
+  color: var(--font-color);
   margin-bottom: 1.5rem;
 }
 
 a.btn-back {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  background-color: #1a303f;
-  color: #e6d6c1;
+  background-color: var(--bg-color);
+  color: var(--bg-color2);
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
@@ -59,7 +65,7 @@ a.btn-back {
 }
 
 a.btn-back:hover {
-  background-color: #14242f;
+  background-color: var(--hover-color);
 }
 
 .fb-comments {
