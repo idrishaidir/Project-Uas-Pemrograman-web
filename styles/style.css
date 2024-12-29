@@ -2,17 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: none; */
 }
 
-body {
+body,
+html {
+  width: 100%;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-x: hidden;
+  background-color: #2d4354;
   font-family: sans-serif, Tahoma, Verdana;
 }
 
 /* Header Start */
 header {
-  width: 100vw;
   overflow: hidden;
   position: relative;
 }
@@ -26,95 +30,283 @@ header {
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .carousel-slide {
   min-width: 100%;
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .carousel-slide img {
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
+}
+
+.carousel-slide.no-cover img {
+  object-fit: fill;
 }
 
 .caption {
   position: absolute;
+  bottom: 10%;
+  left: 10%;
   color: #fff;
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  font-size: 1.5em;
-  font-weight: bold;
-  /* border-radius: 1px; */
-  text-shadow: 7px 5px 5px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.caption h1 {
+  font-size: 150%;
+  margin: 0;
 }
 
 .caption p {
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 0.5em;
-  max-width: auto;
+  font-size: 100%;
+  margin: 5px 0 0;
 }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 25%;
+}
+
 /* Header End */
 
 /* Main Start */
-/*Visi dan Misi*/
-.visiMisi {
-  margin-top: 1em;
+
+/* visi misi start */
+.visi-misi {
   text-align: center;
-  padding: 0.5em 20%;
+  background-color: #2d4354;
+  border-radius: 8px;
+  padding: 2rem 2rem;
+  margin: 2rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.visiMisi h1 {
+
+.judul {
+  font-size: 2em;
+  color: #dbc7af;
+  text-align: center;
+  margin-top: 2rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.isi {
+  color: #fff3e5;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+  animation: slideUp 1s ease-out;
+}
+
+.toggle-content {
+  display: none;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: #dbc7af;
+  color: #2d4354;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-content:hover {
+  background-color: #c0a98e;
+}
+/* visi misi end */
+
+/* prestasi start */
+.prestasi {
+  width: 100%;
+  height: 100vh; /* atau ukuran yang sesuai */
+  background-image: url("../assets/home/background-home1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sub-judul-prestasi {
+  text-align: center;
+}
+.sub-judul-prestasi h1 {
+  font-weight: 800;
+  font-size: 2em;
   padding-top: 1em;
+  color: #2d4354;
 }
 
-.visiMisi li {
-  text-align: justify;
+.sub-judul-prestasi p {
+  padding: 1em 1em 0em 1em;
+  font-size: 1em;
+  color: #636a70;
 }
 
-/* Tentang Kami */
-.tentangKami {
-  padding: 3rem;
-  background-color: rgb(56, 56, 56);
+.caption-prestasi,
+.caption-kegiatan {
+  font-weight: 300;
+  padding-top: 1em;
+  font-size: 33px;
+  display: grid;
+  position: relative;
 }
-.tentangKami h1 {
-  color: #fff;
+
+.caption-prestasi {
+  color: #fff3e5;
+  gap: 7em;
+}
+
+.caption-prestasi img {
+  width: 500px;
+  position: absolute;
+  right: -3em;
+  bottom: 10%;
+  z-index: 999;
+}
+
+.caption-prestasi1 {
   text-align: center;
+  width: 80%;
+  background-color: #73766a;
+  padding: 5px 0px 5px 0px;
+  position: relative;
+  right: 10px;
+  border-radius: 10px;
 }
-.content {
-  display: flex;
+
+.caption-prestasi2 {
+  max-width: 100%;
+  background: linear-gradient(to right, #73766a, #fff3e5);
+  padding: 5px 20px 5px 20px;
+  position: relative;
+  right: -200px;
+  border-radius: 10px;
+}
+/* Prestasi End */
+/* kegiatan start */
+.kegiatan {
+  width: 100%;
+  height: 100vh; /* atau ukuran yang sesuai */
+  background-image: url("../assets/home/background-home2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sub-judul-kegiatan {
+  padding-top: 1em;
+  color: #2d4354;
   text-align: center;
-  padding-top: 1rem;
-  padding-right: 10%;
-  padding-left: 10%;
+  color: #fff3e5;
 }
 
-.content img {
-  background-color: beige;
-  padding: 1em;
-  width: 40%;
+.caption-kegiatan {
+  gap: 6em;
+  color: #2d4354;
 }
 
-.content p {
-  padding: 1em;
-  background-color: rgb(48, 41, 41);
-  color: white;
-  padding-left: 2rem;
-  text-align: justify;
+.caption-kegiatan img {
+  width: 1000px;
+  position: absolute;
+  bottom: -14%;
+  z-index: 999;
 }
-hr {
-  height: 0.2rem;
-  margin: 0 auto;
-  background-color: aqua;
-  width: 20%;
+
+.caption-kegiatan1 {
+  width: 100%;
+  padding: 5px 10px 5px 20px;
+  position: relative;
+  right: -50%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #fff9eb, #2d4354);
 }
-/* Main END */
-@media screen and (max-width: 768px) {
-  .caption {
-    font-size: 1.5em;
-    padding: 8px 16px;
+
+.caption-kegiatan2 {
+  text-align: end;
+  width: 80%;
+  background: linear-gradient(to right, #2d4354, #fff9eb);
+  padding: 5px 20px 5px 10px;
+  position: relative;
+  bottom: -50%;
+  right: 10px;
+  border-radius: 10px;
+}
+
+.tentang-kami {
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  background-color: #fff3e5;
+  color: #2d4354;
+}
+.tentang-kami p {
+  padding: 5px 10% 5px 10%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hide {
+    display: none;
+  }
+
+  .caption-prestasi {
+    gap: 1em;
+  }
+
+  .caption-kegiatan {
+    padding-top: 1em;
+    gap: 2em;
+  }
+
+  .caption-kegiatan1,
+  .caption-prestasi2 {
+    right: -5%;
+  }
+
+  .toggle-content {
+    display: block;
+  }
+  .sub-judul-kegiatan,
+  .sub-judul-prestasi {
+    font-size: 1em;
+  }
+  .sub-judul-kegiatan p,
+  .sub-judul-prestasi p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 426px) {
+  .caption-kegiatan,
+  .caption-prestasi {
+    font-size: 20px;
   }
 }

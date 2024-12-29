@@ -1,21 +1,103 @@
+:root {
+  --bg-color: #1a303f;
+  --bg-color2: #fdf5e6;
+  --font-color: #2b505c;
+  --hover-color: #333;
+  --hover-color2: #c0b8aa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .kontak {
-  padding: 2rem 5rem;
+  max-width: 1200px;
+  margin: 2px auto;
+  padding: 20px;
+}
+
+.kontak h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--bg-color2);
 }
 
 iframe {
   width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .detail-kontak {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
-.alamat {
-  max-width: 30%;
+.detail-kontak div {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px;
+  background: var(--bg-color2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.notelp a {
-  color: black;
+.detail-kontak h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--font-color);
+}
+
+.detail-kontak p {
+  font-size: 1rem;
+  color: var(--font-color);
+  margin-bottom: 10px;
+}
+
+.detail-kontak a {
   text-decoration: none;
+  color: var(--font-color);
+  transition: color 0.3s;
+}
+
+.detail-kontak a:hover {
+  color: var(--hover-color);
+}
+
+.detail-kontak i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: var(--bg-color);
+}
+
+.fb-comments {
+  padding-top: 2rem;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .detail-kontak {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .detail-kontak div {
+    flex: 1 1 100%;
+    max-width: 600px;
+  }
 }

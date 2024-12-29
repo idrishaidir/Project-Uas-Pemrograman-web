@@ -1,0 +1,65 @@
+/* Reset dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6d6c1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.berita-detail h2 {
+  color: #1a303f;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tanggal-berita {
+  color: #1a303f;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.gambar-berita {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.isi-berita {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1a303f;
+  margin-bottom: 1.5rem;
+}
+
+a.btn-back {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #1a303f;
+  color: #e6d6c1;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+a.btn-back:hover {
+  background-color: #14242f;
+}
+
+.fb-comments {
+  padding-top: 2rem;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
