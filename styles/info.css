@@ -403,6 +403,10 @@ h2 {
 
 /* Media query for mobile */
 @media (max-width: 768px) {
+  html{
+    font-size: 75%;
+  }
+
   header {
     padding-top: 10%;
   }

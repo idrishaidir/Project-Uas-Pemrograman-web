@@ -125,6 +125,18 @@ body {
   cursor: pointer;
 }
 
+@media (max-width : 1440px) {
+  html {
+    font-size: 97%;
+  }
+}
+
+@media (max-width : 1024px) {
+  html {
+    font-size: 70%;
+  }
+}
+
 @media (max-width: 768px) {
   .tombol {
     display: block;
@@ -159,6 +171,7 @@ body {
   .navbar .menu-navbar li a:hover {
     color: #2b505c;
   }
+
   .navbar .menu-navbar li a::after {
     transform-origin: 0 0;
     border-bottom: 0.2rem solid #967bb6;
