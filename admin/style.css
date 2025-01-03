@@ -158,11 +158,12 @@ table a {
 }
 
 .action-buttons {
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: flex;
+
+  /* justify-content: flex-start; */
+  /* flex-wrap: wrap; */
   height: 100%;
 }
-
 /* Gaya Admin */
 .admin-container {
   width: 800px;
@@ -205,7 +206,7 @@ table a {
   padding: 10px 20px;
   border: 1px solid var(--bg-color);
   border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s, color 0.3s;
 }
 
 .admin-menu a:hover {

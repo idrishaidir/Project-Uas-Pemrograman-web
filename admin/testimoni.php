@@ -160,7 +160,6 @@ if (isset($_GET['act']) && $_GET['act'] == 'edit' && isset($_GET['id'])) {
                         <th>No</th>
                         <th>Nama</th>
                         <th>Sebagai</th>
-                        <th>Isi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -174,7 +173,6 @@ if (isset($_GET['act']) && $_GET['act'] == 'edit' && isset($_GET['id'])) {
                             <td data-label="No">' . $i++ . '</td>
                             <td data-label="Nama">' . htmlspecialchars($row['Nama']) . '</td>
                             <td data-label="Sebagai">' . htmlspecialchars($row['Sebagai']) . '</td>
-                            <td data-label="Isi" class="isi">' . htmlspecialchars($row['Isi']) . '</td>
                             <td data-label="Aksi" class="action-buttons">
                                  <a href="?mod=testimoni&act=edit&id=' . $row['ID'] . '" class="action-link edit">Edit</a>
                                 <a href="?mod=testimoni&act=hapus&id=' . $row['ID'] . '" class="action-link delete" onclick="return confirm(\'Apakah Anda yakin ingin menghapus berita ini?\')">Hapus</a>

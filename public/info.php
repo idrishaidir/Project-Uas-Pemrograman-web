@@ -74,6 +74,23 @@ $hasil = mysqli_query($connect, $sql);
                 while ($row = mysqli_fetch_assoc($hasil)) {
                     $gambar = $row['Gambar'] ? '../' . $row['Gambar'] : 'path/to/default-image.jpg';
                     $teks_pendek = substr(strip_tags($row['Teks']), 0, 100) . '...';
+                    
+                    // Tentukan link berdasarkan kategori
+                    if ($row['Kategori'] == 'kalender') {
+                        // Ambil URL dari kolom 'Isi' dan bersihkan dari tag HTML
+                        $url = strip_tags($row['Isi']);
+                        
+                        // Validasi URL (pastikan itu adalah URL yang benar)
+                        if (filter_var($url, FILTER_VALIDATE_URL)) {
+                            $link = htmlspecialchars($url); // Gunakan URL jika valid
+                        } else {
+                            $link = ''; // Jika tidak valid, kosongkan link
+                        }
+                    } else {
+                        // Untuk kategori lainnya, link ke halaman detail berita
+                        $link = 'detail.php?id=' . $row['ID'];
+                    }
+
                     echo '
                     <div class="col-md-4">
                         <div class="card animate__animated animate__pulse">
@@ -82,7 +99,7 @@ $hasil = mysqli_query($connect, $sql);
                                 <h5 class="card-title">' . htmlspecialchars($row['Judul']) . '</h5>
                                 <p class="card-text"><strong>Tanggal:</strong> ' . htmlspecialchars($row['Tanggal']) . '</p>
                                 <p class="card-text">' . htmlspecialchars($teks_pendek) . '</p>
-                                <a href="detail.php?id=' . $row['ID'] . '" class="btn">Baca selengkapnya</a>
+                                <a href="' . $link . '" class="btn">Baca selengkapnya</a>
                             </div>
                         </div>
                     </div>
