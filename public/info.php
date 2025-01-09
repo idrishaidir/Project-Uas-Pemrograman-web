@@ -27,7 +27,6 @@ $hasil = mysqli_query($connect, $sql);
 <body>
     <div id="navbar-container"></div>
     <header>
-        <!-- Carousel Tetap dengan CSS dan JS Kustom -->
         <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-slide no-cover">
@@ -56,8 +55,6 @@ $hasil = mysqli_query($connect, $sql);
         <div class="menu" id="menu">
         <div class="hamburger"></div>
   </div>
-
-  <!-- Navigation -->
   <ul class="nav buttons-container" id="nav">
     <li><a onclick="filterBerita('Prestasi')">PRESTASI</a></li>
     <li><a onclick="filterBerita('Organisasi')">ORGANISASI</a></li>
@@ -77,17 +74,13 @@ $hasil = mysqli_query($connect, $sql);
                     
                     // Tentukan link berdasarkan kategori
                     if ($row['Kategori'] == 'kalender') {
-                        // Ambil URL dari kolom 'Isi' dan bersihkan dari tag HTML
                         $url = strip_tags($row['Isi']);
-                        
-                        // Validasi URL (pastikan itu adalah URL yang benar)
                         if (filter_var($url, FILTER_VALIDATE_URL)) {
-                            $link = htmlspecialchars($url); // Gunakan URL jika valid
+                            $link = htmlspecialchars($url);
                         } else {
-                            $link = ''; // Jika tidak valid, kosongkan link
+                            $link = '';
                         }
                     } else {
-                        // Untuk kategori lainnya, link ke halaman detail berita
                         $link = 'detail.php?id=' . $row['ID'];
                     }
 
@@ -115,8 +108,6 @@ $hasil = mysqli_query($connect, $sql);
             ?>
         </div>
     </main>
-
-    <!-- Link JS Custom -->
     <script src="../script/info.js"></script>
     <script src="../script/main.js" defer></script>
 </body>

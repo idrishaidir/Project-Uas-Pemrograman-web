@@ -23,7 +23,6 @@ if (!$berita) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=getprofilweb('detail-info')?></title>
-    <!-- Link CSS Custom -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v21.0"></script>
     <link rel="stylesheet" href="../styles/detail.css" />
 </head>
@@ -51,7 +50,6 @@ if (!$berita) {
             </div>
             <div id="fb-root"></div>
             <?php
-                // Ganti URL lokal dengan URL yang diinginkan
                 $uri = 'http://yourdomain.com' . $_SERVER['REQUEST_URI'];
             ?>
 
@@ -60,7 +58,6 @@ if (!$berita) {
         </div>
     </main>
 
-    <!-- Link JS Custom -->
     <script src="../script/main.js" defer></script>
 </body>
 </html>

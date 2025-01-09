@@ -42,12 +42,12 @@
           <i class="fa-solid fa-address-book"></i>
           <h2>No. Telepon & Email</h2>
           <p>
-            <a href="https://wa.me/056158392"
+            <a href="https://wa.me/6289530738954"
               ><i class="fa-solid fa-phone"></i> 056158392</a
             >
           </p>
           <p>
-            <a href="#"
+            <a href="mailto:17230172@bsi.ac.id?"
               ><i class="fa-solid fa-envelope"></i> hogwarts@sch.ac.id</a
             >
           </p>

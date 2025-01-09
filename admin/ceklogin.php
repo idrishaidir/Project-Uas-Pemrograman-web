@@ -26,7 +26,6 @@ if (isset($_POST['submit'])) {
 
         // Verifikasi password
         if (password_verify($password_input, $stored_password)) {
-            // Password benar, buat sesi
             $_SESSION['loginadmin'] = $user['username'];
             $_SESSION['loginadminid'] = $user['ID'];
             $_SESSION['loginadminemail'] = $user['email'];

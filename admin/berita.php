@@ -86,7 +86,6 @@ if (isset($_POST['update'])) {
             exit;
         }
     } else {
-        // Retain existing image if no new image is uploaded
         $query = mysqli_query($connect, "SELECT Gambar FROM berita WHERE ID = '$id'");
         $row = mysqli_fetch_assoc($query);
         $gambar = $row['Gambar'];

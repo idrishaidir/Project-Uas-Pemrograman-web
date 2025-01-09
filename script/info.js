@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 50);
   }
 
-  // Tambahkan fungsi ke global scope
   window.nextSlide = nextSlide;
   window.prevSlide = prevSlide;
   window.showContent = showContent;

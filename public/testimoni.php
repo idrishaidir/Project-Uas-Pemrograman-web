@@ -13,7 +13,6 @@ $hasil = mysqli_query($connect, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimoni</title>
-    <!-- Link CSS Custom -->
     <link rel="stylesheet" href="../styles/testimoni.css">
 </head>
 <body>
@@ -52,8 +51,6 @@ $hasil = mysqli_query($connect, $sql);
             ?>
         </div>
     </main>
-
-    <!-- Link JS Custom -->
     <script src="../script/testimoni.js"></script>
     <script src="../script/main.js" defer></script>
 </body>

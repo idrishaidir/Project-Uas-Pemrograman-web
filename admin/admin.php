@@ -74,7 +74,7 @@ include("ceklogin.php");
                   include("useradmin.php");
                   break;
               default:
-                  echo "Selamat Datangg " . $_SESSION['loginadminnama'] . " ";
+                  echo "Selamat Datang " . $_SESSION['loginadminnama'] . " ";
                   break;
             }
         ?>
@@ -85,7 +85,5 @@ include("ceklogin.php");
         <p>Oops! The page you are looking for cannot be found.</p>
         <p>hanya dapat ditampilkan didekstop</p>
     </div>
-
-    <!-- content -->
 </body>
 </html>
